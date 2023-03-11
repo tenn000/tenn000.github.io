@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>健全的中学生三人组OC | 遊園施設</title>
+        <meta name="author" content="tenn" />
+        <meta name="description" content="愛も青春もない旅立ち" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="icon" href="/images/avatar.png" />
+        <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+            </transition>
+            <transition name="into">
+            <div id="main" v-show="!loading">
+                <nav id="menu" ref="menu">
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>遊園施設</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://peing.net/zh-CN/tenn000">
+            <i class="fa-solid fa-comment fa-fw"></i>
+            <span>&ensp;提问箱</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
+        <div class="title" @click="showMenu = !showMenu">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;遊園施設</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="showMenu">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://peing.net/zh-CN/tenn000">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-comment fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">提问箱</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+                <div class="article">
+    <div>
+        <h1>健全的中学生三人组OC</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/11
+        </span>
+        
+        <span class="category">
+            <a href="/categories/OC/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                OC
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E9%AB%98%E4%B8%AD%E7%94%9F/" style="color: #03a9f4">高中生</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p><img src="https://raw.githubusercontent.com/tenn000/picGO/main/%E4%B8%89%E4%BA%BA%E7%BB%84.jpg"></p>
+<p>把在毛象上碎碎念的部分有意思的设定进行了修改和搬运…！</p>
+<p>内容大概为：受欢迎的优等生同学对阴暗b的精神霸凌，好心常识人对阴暗b的普通关心，阴暗b对好心同学的背刺！总结为没有爱也没有道德的（常识人同学还是有的）健全DK组🥰</p>
+<ul>
+<li><p>关于身高</p>
+<ul>
+<li>濑井 167 （部分原因是驼背显得矮）</li>
+<li>白鸟 179</li>
+<li>神宫寺 175</li>
+</ul>
+</li>
+<li><p>关于痛觉</p>
+<ul>
+<li><p>濑井</p>
+<p>痛觉钝感，对物理伤害带来的疼痛抗性很高；相对的精神力比较低</p>
+</li>
+<li><p>白鸟</p>
+<p>普通人疼痛感知，但是因为自愈能力差所以受伤后会比一般人痛很久</p>
+</li>
+<li><p>神宫寺</p>
+<p>非常怕痛。因为没什么遭遇疼痛的机会所以不明显，但就算真的被打了也会努力装作不痛的死要面子活受罪派</p>
+</li>
+</ul>
+</li>
+<li><p>关系性&#x2F;看法</p>
+<ul>
+<li><p>濑井</p>
+<p>对白鸟：类似飞蛾的趋光性</p>
+<p>对神宫寺：活着的死人</p>
+</li>
+<li><p>白鸟</p>
+<p>对濑井：普通的关心</p>
+<p>对神宫寺：虽然让人火大但是有点憧憬</p>
+</li>
+<li><p>神宫寺</p>
+<p>对濑井：乐子人心态+控制欲</p>
+<p>对白鸟：好骗的工具人笨蛋</p>
+</li>
+</ul>
+</li>
+<li><p>折磨常识人发言</p>
+<ul>
+<li>濑井虽然处境很惨，但可以把精神伤害转移给白鸟。因为白鸟对于濑井的态度总是很包容，是很方便的伤害吸收器。所以濑井被做了什么过分的事都好，只要有白鸟在就统统等于HP-1</li>
+<li>转移的方式：<ul>
+<li>无论是被暴力相向还是人格遭遇侮辱否定，总之越惨越要让本性温柔的白鸟看到（简称卖惨），白鸟越感到怜悯甚至不适，濑井就越愉快</li>
+<li>另一种方式是对白鸟本人造成伤害（STK行为等）。白鸟不知道是濑井干的，不过有STK存在，但是又觉得没造成过实质性伤害就一直没放在心上</li>
+</ul>
+</li>
+<li>白鸟有时候会觉得太沉重了喘不过气，但是濑井会拿“唯一关心自己的人”这样的话术束缚对方。总结就是对于白鸟来说濑井真的很难缠</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2023 - 2023 遊園施設
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;tenn
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            </transition>
+            
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+
+<script
+    src="https://giscus.app/client.js"
+    data-repo="tenn000/tenn000.github.io"
+    data-repo-id="R_kgDOJCVDeA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOJCVDeM4CUtQB"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+        
+    </body>
+    <script type="text/javascript" src="/js/love.js"></script>
+    <div id="cursor"></div>
+    <link rel="stylesheet" href="/css/cursor.min.css" />
+    <script src="/js/cursor.min.js"></script>
+</html>
